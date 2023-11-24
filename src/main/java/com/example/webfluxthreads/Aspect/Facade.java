@@ -73,13 +73,11 @@ public class Facade {
         System.out.println("API Key value from enviroment:  " + env.getProperty("apikey."+declaredApikeyType) );
         System.out.println("Actual delivered API Key:  " + keyValue );
 
-
-        /*
-        if(!vault.get(server).equals(keyValue)){
+        if(!env.getProperty("apikey."+declaredApikeyType).equals(keyValue)){
             throw new MyCustomException ("keys do not match");
         }
 
-         */
+
         //String expectedKey = signature.getMethod().getAnnotation(ApiKeyProtected.class).apiKey();
         //System.out.println("Server Name  " +  server + "     value" +vault.get(server));
 
